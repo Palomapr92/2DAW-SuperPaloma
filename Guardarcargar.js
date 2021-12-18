@@ -54,7 +54,7 @@ class Guardarcargar{
                                                           //ponga cuando tenga clientes o este abierta,
     
             let div_mensaje = document.getElementById(`mensaje` + contador);
-            div_mensaje.innerHTML = "<br>En la caja hay " + value + " cliente";
+            div_mensaje.innerHTML = "<br>EN LA CAJA HAY " + value + " CLIENTE";
     
             let datos_caja = document.getElementById("CAJA" + contador);  
             datos_caja.value = value;

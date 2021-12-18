@@ -101,20 +101,20 @@ function cambiarClientes(tipo_accion,numeroCaja) {
   
             let mensaje_caja = mensajes;
             console.log("holaaa" + mensaje_caja);
-            mensaje_caja.innerHTML = "<br>En la caja hay " + total_clientes_caja + " cliente";
+            mensaje_caja.innerHTML = "<br>HAY " + total_clientes_caja + " CLIENTE";
 
             
         } else if (tipo_accion == "quitar") {
             total_clientes_caja = total_clientes_caja - 1;
             let mensaje_caja = mensajes;
-            mensaje_caja.innerHTML = "<br>En la caja hay " + total_clientes_caja + " cliente";
+            mensaje_caja.innerHTML = "<br>HAY " + total_clientes_caja + " CLIENTE";
 
           
             
             if (total_clientes_caja <= 0) {
                 total_clientes_caja = 0;
                 divcaja.style.background = "rgb(33, 153, 155)";
-                mensaje_caja.innerHTML = "<br>Caja cerrada";
+                mensaje_caja.innerHTML = "<br>CAJA CERRADA";
             } 
             
             
@@ -128,10 +128,10 @@ function cambiarClientes(tipo_accion,numeroCaja) {
 
         // cambiando un VALOR CSS de una etiqueta:
         if (total_clientes_caja != 0 || tipo_accion == 'poner') {
-            console.log("vamos a poner el elemento en rojo!");
+            console.log("vamos a poner el elemento en azul!");
             divcaja.style.background = "rgb(192, 62, 83)";
             let mensaje_caja = mensajes;
-            mensaje_caja.innerHTML = "<br>Caja abierta";
+            mensaje_caja.innerHTML = "<br>CAJA ABIERTA";
 
             
         }
@@ -146,10 +146,10 @@ function cambiarClientes(tipo_accion,numeroCaja) {
    
 
     if (total_clientes_caja == 4) {
-        alert("La caja esta saturada.");
+        alert("La caja esta completa.");
         let fin = new Date();
         let tiempoTranscurrido = (fin-inicio)/1000; //en milisegundos
-        alert('tiempo transcurrido:' + tiempoTranscurrido);
+        alert('Tiempo que ha transcurrido:' + tiempoTranscurrido);
     }
 
    
