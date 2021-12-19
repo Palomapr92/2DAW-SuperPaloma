@@ -6,7 +6,8 @@ let body = document.querySelector("#body"); // cambiar atributos HTML / CSS
 var style_body = window.getComputedStyle(body); // obtener atributos CSS 
 var rutaImagenFondoOriginal = style_body.getPropertyValue("background-image");
 
-// hacer dos botones uno paraguardar y otro para recuperar, usando web storage para que guarde como van las cajas
+// hacer dos botones uno paraguardar y otro para recuperar, 
+//usando web storage para que guarde como van las cajas
 
 function cambiarClientes(tipo_accion,numeroCaja) {
 
@@ -84,7 +85,7 @@ function cambiarClientes(tipo_accion,numeroCaja) {
 
 
 
-    // vamos a comprobar si el background de la caja está en verde
+    // vamos a comprobar si el background de la caja está en bourdeo
 
     console.log("|" + stylecaja.getPropertyValue("background") + "|");
     if (stylecaja.getPropertyValue("background") == "rgb(192, 62, 83) none repeat scroll 0% 0% / auto padding-box border-box") {
@@ -128,16 +129,13 @@ function cambiarClientes(tipo_accion,numeroCaja) {
 
         // cambiando un VALOR CSS de una etiqueta:
         if (total_clientes_caja != 0 || tipo_accion == 'poner') {
-            console.log("vamos a poner el elemento en azul!");
+            console.log("vamos a poner el elemento en bourdeo!");
             divcaja.style.background = "rgb(192, 62, 83)";
             let mensaje_caja = mensajes;
             mensaje_caja.innerHTML = "<br>CAJA ABIERTA";
 
             
         }
-
-        // para añadir una clase nueva tenemos esto:
-        //divcaja1.setAttribute("class", "caja cajadisponible");
 
     }
         console.log(total_clientes_caja);
@@ -149,7 +147,7 @@ function cambiarClientes(tipo_accion,numeroCaja) {
         alert("La caja esta completa.");
         let fin = new Date();
         let tiempoTranscurrido = (fin-inicio)/1000; //en milisegundos
-        alert('Tiempo que ha transcurrido:' + tiempoTranscurrido);
+        alert('Tiempo transcurrido:' + tiempoTranscurrido);
     }
 
    
@@ -157,7 +155,6 @@ function cambiarClientes(tipo_accion,numeroCaja) {
 
 let input_caja1 = document.getElementById("CAJA1");
         input_caja = input_caja1;
-
 
         let divcaja1 = document.querySelector("#divcaja1"); // cambiar atributos HTML / CSS
         divcaja = divcaja1;
@@ -193,9 +190,7 @@ document.getElementById("divcaja4").oncontextmenu = function() {
 };
 
 
-
 //FUNCIONALIDAD BOTON DIA Y NOCHE
-
 
   function ponerOscuro(){
 
@@ -238,7 +233,6 @@ document.getElementById("divcaja4").oncontextmenu = function() {
 
             body.style.backgroundImage = 'url(supeer.jpg)';
         }  
-        
                    
     }
 
