@@ -1,7 +1,6 @@
 
 var inicio;
 
-
 let body = document.querySelector("#body"); // cambiar atributos HTML / CSS
 var style_body = window.getComputedStyle(body); // obtener atributos CSS 
 var rutaImagenFondoOriginal = style_body.getPropertyValue("background-image");
@@ -32,7 +31,6 @@ function cambiarClientes(tipo_accion,numeroCaja) {
         mensajes = document.getElementById('mensaje1');
 
         
-
     } else if (numeroCaja == "caja2") {    
 
         let input_caja2 = document.getElementById("CAJA2");
@@ -45,7 +43,6 @@ function cambiarClientes(tipo_accion,numeroCaja) {
         
         let div_mensaje = document.getElementById('mensaje2');
         mensajes = div_mensaje;
-        
         
 
     } else if (numeroCaja == "caja3") {    
@@ -84,13 +81,11 @@ function cambiarClientes(tipo_accion,numeroCaja) {
     console.log("|" + stylecaja.getPropertyValue("background") + "|");
 
 
-
     // vamos a comprobar si el background de la caja está en bourdeo
 
     console.log("|" + stylecaja.getPropertyValue("background") + "|");
     if (stylecaja.getPropertyValue("background") == "rgb(192, 62, 83) none repeat scroll 0% 0% / auto padding-box border-box") {
         inicio = new Date();
-
 
         // dependiendo de lo que pasemos en la variable "tipo_accion", sumará o restará:
         if (tipo_accion == "poner") {
@@ -111,8 +106,7 @@ function cambiarClientes(tipo_accion,numeroCaja) {
             mensaje_caja.innerHTML = "<br>HAY " + total_clientes_caja + " CLIENTE";
 
           
-            
-            if (total_clientes_caja <= 0) {
+                if (total_clientes_caja <= 0) {
                 total_clientes_caja = 0;
                 divcaja.style.background = "rgb(33, 153, 155)";
                 mensaje_caja.innerHTML = "<br>CAJA CERRADA";
@@ -120,7 +114,7 @@ function cambiarClientes(tipo_accion,numeroCaja) {
             
             
         } else {
-            alert("has introducido mal el tipo de acción!");
+            alert("el tipo de acción esta mal introducido");
         }
 
         input_caja.value = total_clientes_caja;
@@ -129,19 +123,14 @@ function cambiarClientes(tipo_accion,numeroCaja) {
 
         // cambiando un VALOR CSS de una etiqueta:
         if (total_clientes_caja != 0 || tipo_accion == 'poner') {
-            console.log("vamos a poner el elemento en bourdeo!");
+            console.log("elemento en bourdeo!");
             divcaja.style.background = "rgb(192, 62, 83)";
             let mensaje_caja = mensajes;
-            mensaje_caja.innerHTML = "<br>CAJA ABIERTA";
-
-            
+            mensaje_caja.innerHTML = "<br>CAJA ABIERTA";     
         }
-
     }
         console.log(total_clientes_caja);
 
-
-   
 
     if (total_clientes_caja == 4) {
         alert("La caja esta completa.");
@@ -154,7 +143,8 @@ function cambiarClientes(tipo_accion,numeroCaja) {
 }
 
 let input_caja1 = document.getElementById("CAJA1");
-        input_caja = input_caja1;
+        
+        sinput_caja = input_caja1;
 
         let divcaja1 = document.querySelector("#divcaja1"); // cambiar atributos HTML / CSS
         divcaja = divcaja1;
